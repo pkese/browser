@@ -54,7 +54,7 @@ module Program =
     /// urlUpdate: similar to `update` function, but receives parsed url instead of message as an input.
     let toNavigable (parser : Parser<'a>)
                     (urlUpdate : 'a->'model->('model * Cmd<'msg>))
-                    (program : Program<'a,'model,'msg,'view>) =
+                    (program : Program<'arg,'model,'msg,'view>) =
 
         let onChangeRef : (Event -> unit) ref =
             fun _ ->
